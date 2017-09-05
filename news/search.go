@@ -25,9 +25,7 @@ func getLatest(sources []Source) []Topic {
 		var articleAPI newsAPIResponse
 		json.Unmarshal(body, &articleAPI)
 
-		for _, topic := range articleAPI.Articles {
-			topics = append(topics, topic)
-		}
+		topics = append(topics, articleAPI.Articles...)
 	}
 
 	return topics
