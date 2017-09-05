@@ -1,9 +1,11 @@
 # Grabber
 
 Example project to process distant APIs with a help of Go language.
-Libraries that are used in the project:
+Libraries and APIs that are used in the project:
 
 - [Gin](https://github.com/gin-gonic/gin)
+
+- [News API](https://newsapi.org/)
 
 ## Learn some Golang:
 
