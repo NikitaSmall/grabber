@@ -1,7 +1,8 @@
 package main
 
-import "fmt"
+import "grabber/router"
 
 func main() {
-	fmt.Println("Hello, World!")
+	r := router.New()
+	r.Run()
 }
