@@ -19,6 +19,7 @@ type Source struct {
 }
 
 type sourceAPIResponse struct {
+	Status  string
 	Sources []Source `json:"sources"`
 }
 
@@ -40,5 +41,9 @@ func (a Archive) resetData() {
 }
 
 func (a Archive) collectNews(category string) {
+	sources := getSourcesFor(category)
+	topics := getLatest(sources)
+
+	a[category] = topics
 	log.Printf("The news for %s category are collected.\n", category)
 }
